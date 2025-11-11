@@ -6,7 +6,9 @@ import {
     Route,
 } from "react-router-dom";
 import Login from "./component/Login/login";
-
+import Register from "./component/Login/Register";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
     return (
         <Router>
@@ -15,6 +17,9 @@ function App() {
                 <Switch>
                     <Route path="/login">
                         <Login/>
+                    </Route>
+                    <Route path="/register">
+                        <Register/>
                     </Route>
                     <Route path="/about">
                         About
@@ -32,6 +37,18 @@ function App() {
                         404 Not Found
                     </Route>
                 </Switch>
+                <ToastContainer
+                    position="top-right"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick={false}
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                />
             </div>
         </Router>
 
